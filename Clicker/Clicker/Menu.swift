@@ -13,11 +13,12 @@ class Menu: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastScoreValue.text = "0"
     }
     
     @IBAction func backToMenu(_ segue: UIStoryboardSegue) {
-        guard let gameVC = segue.source as? Game else { return }
-        lastScoreValue.text = gameVC.scoreValue.text
+        guard let gameVC = segue.source as? GameOver else { return }
+        lastScoreValue.text = gameVC.valueScoreGame
     }
 
     /*

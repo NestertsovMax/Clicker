@@ -18,7 +18,7 @@ class Game: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        scoreValue.text = "\(counter)"
+        updateCounter()
     }
     
     @IBAction func tapGreenButton(_ sender: UIButton) {
@@ -56,7 +56,7 @@ class Game: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "sgGameOver" else { return }
         guard let destVC = segue.destination as? GameOver else { return }
-        destVC.scoreGameOver.text = scoreValue.text
+        destVC.valueScoreGame = scoreValue.text
 
     }
 

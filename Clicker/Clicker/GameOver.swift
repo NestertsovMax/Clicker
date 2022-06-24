@@ -11,13 +11,13 @@ class GameOver: UIViewController {
     
     @IBOutlet var scoreGameOver: UILabel!
     
-    var valueScoreGame: Int?
+    var valueScoreGame: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let value = valueScoreGame {
-            scoreGameOver.text = "\(value)"
+            scoreGameOver.text = value
         } else {
             scoreGameOver.text = "Go next game"
         }
